@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 255, 224);
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+h1{
+    margin: 30px;
+}
+.active{
+    background-color: black;
+    color: white;
+}
+
+button{
+    background-color: rgb(143, 143, 250);
+    padding: 20px;
+    width: 300px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgb(106, 106, 252);
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+box-shadow: 2px 2px 5px rgb(59, 59, 59);
+}
+
+.timer{
+    padding: 25px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    
+}
+

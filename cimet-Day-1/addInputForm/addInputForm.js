@@ -13,6 +13,6 @@ function addInputs(e) {
     clickArea.insertAdjacentElement("beforebegin",clone)
     count++
   } else {
-    alert("reached max linit");
+    alert("maximum limit reached 5");
   }
 }
