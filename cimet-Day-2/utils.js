@@ -3,6 +3,9 @@ import { interval,timer } from "./quiz.js";
 let answerValue;
 let questionCount = 0;
 let result = 0;
+let alreadyDoneQuestion = {
+
+}
 
 
 
@@ -61,8 +64,16 @@ clickDiv.addEventListener("click", (element) => {
 function generateRandomQuestion() {
   const randomNumber = generate_Random_Number_One_To_Five();
 
-  const { question, options, answer } = questionsArray[randomNumber - 1];
-  updateDomWithQuestion(question, options, answer);
+  if(alreadyDoneQuestion[randomNumber] && questionCount <5){
+
+
+      generateRandomQuestion()   
+  }else{
+    const { question, options, answer } = questionsArray[randomNumber - 1];
+    updateDomWithQuestion(question, options, answer);
+    alreadyDoneQuestion[randomNumber] = randomNumber
+  }
+
 }
 
 function quizGenerater() {
