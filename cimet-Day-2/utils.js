@@ -1,20 +1,14 @@
 import questionsArray from "./question.js";
-import { interval,timer } from "./quiz.js";
+import { interval, timer } from "./quiz.js";
 let answerValue;
 let questionCount = 0;
 let result = 0;
-let alreadyDoneQuestion = {
-
-}
-
-
+let alreadyDoneQuestion = {};
 
 let questionElement = document.querySelector(".question");
 let optionElements = document.querySelectorAll("button");
 let clickDiv = document.querySelector(".optionsMain");
 let mainDiv = document.querySelector(".main");
-
-
 
 function generate_Random_Number_One_To_Five() {
   return Math.ceil(Math.random() * (5 - 0) + 0);
@@ -28,14 +22,9 @@ function updateDomWithQuestion(question, options, answer) {
     }
   });
 
- 
-
-
   if (questionCount == 5) {
     clearInterval(interval);
     clearInterval(timer);
-
-  
 
     mainDiv.innerHTML = `<h1>Quiz over ! Your result is :${result}</h1>`;
   } else {
@@ -64,23 +53,17 @@ clickDiv.addEventListener("click", (element) => {
 function generateRandomQuestion() {
   const randomNumber = generate_Random_Number_One_To_Five();
 
-  if(alreadyDoneQuestion[randomNumber] && questionCount <5){
-
-
-      generateRandomQuestion()   
-  }else{
+  if (alreadyDoneQuestion[randomNumber] && questionCount < 5) {
+    generateRandomQuestion();
+  } else {
     const { question, options, answer } = questionsArray[randomNumber - 1];
     updateDomWithQuestion(question, options, answer);
-    alreadyDoneQuestion[randomNumber] = randomNumber
+    alreadyDoneQuestion[randomNumber] = randomNumber;
   }
-
 }
 
 function quizGenerater() {
   generateRandomQuestion();
 }
 
-export {
-
-  quizGenerater
-};
+export { quizGenerater };
