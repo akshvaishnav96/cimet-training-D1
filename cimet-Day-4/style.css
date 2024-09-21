@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#wrapper{
+    height: 100vh;
+    position: relative;
+}
+
+.container{
+    height: 100%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container > .avatarMin{
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    min-height: 200px;
+    border-radius: 300px;
+}
+
+.avatarMin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.avatarLogo , .addAvaterBtn{
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    aspect-ratio: 1/1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+
+.showAvatarArea{
+    display: flex;
+}
+
+
+
+
+
+
+.avatarLogo > .deleteAvatar{
+    width: 20px;
+    aspect-ratio: 1/1;
+    border: 1px solid gray;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.deleteAvatar:hover{
+        background-color: rgb(155, 10, 10);
+}
+
+form{
+    position: absolute;
+   text-align: center;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   height: 100vh;
+   top: 0;
+   background-color: rgb(0, 0, 0);
+   width: 100%;
+   z-index: 1; 
+
+}
+
+.formButtonMain{
+    display: flex;
+
+}
+
+.formContaint{
+    background-color: rgb(255, 211, 211);
+    width: 500px;
+    aspect-ratio: 3/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(82, 65, 65);
+    border-radius: 20px;
+}
+
+button{
+    margin: 10px;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: green;
+}
+
+.deleConfirmDiv{
+    z-index: 10;
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+.addAvaterBtn , .avatarLogo>p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.addAvaterBtn:hover{
+    background-color: green;
+    rotate: 180deg;
+    color: white;
+}
+
+
+
