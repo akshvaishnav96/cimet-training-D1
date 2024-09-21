@@ -19,7 +19,7 @@
 }
 
 .container > .avatarMin{
-    width: 60%;
+    min-width: 60%;
     background-color: rgb(255, 255, 255);
     min-height: 200px;
     border-radius: 300px;
@@ -68,13 +68,15 @@
     background-color: black;
     color: white;
     cursor: pointer;
+    font-size: 10px;
+    color: red;
 }
 
 .deleteAvatar:hover{
         background-color: rgb(155, 10, 10);
 }
 
-form{
+form , .deleteMain{
     position: absolute;
    text-align: center;
    display: none;
@@ -83,7 +85,7 @@ form{
    flex-direction: column;
    height: 100vh;
    top: 0;
-   background-color: rgb(0, 0, 0);
+   background-color: rgba(0, 0, 0, 0.226);
    width: 100%;
    z-index: 1; 
 
@@ -94,7 +96,7 @@ form{
 
 }
 
-.formContaint{
+.formContaint , .deleConfirmDiv{
     background-color: rgb(255, 211, 211);
     width: 500px;
     aspect-ratio: 3/1;
@@ -104,6 +106,8 @@ form{
     flex-direction: column;
     color: rgb(82, 65, 65);
     border-radius: 20px;
+    border: 5px solid;
+    box-shadow: 0px 0px 15px black;
 }
 
 button{
@@ -128,7 +132,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    cursor: pointer;
+    
     transition: 0.3s ease-in-out;
 }
 
@@ -136,6 +140,7 @@ button:hover{
     background-color: green;
     rotate: 180deg;
     color: white;
+    cursor: pointer;
 }
 
 
